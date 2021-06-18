@@ -10,7 +10,7 @@ npm install zlbridge -D
 //导入之后也可通过全局window.zlbridge拿zlbridge对象
 import zlbridge from "zlbridge";
 或者
-var ZLBridge = require('zlbridge')
+var zlbridge = require('zlbridge')
 ```
 
 ## 原生与JS交互
