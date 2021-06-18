@@ -1,6 +1,6 @@
 {
-  "name": "zlbridge-js",
-  "version": "1.0.2",
+  "name": "zlbridge",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
