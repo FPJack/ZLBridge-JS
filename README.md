@@ -12,10 +12,7 @@ import zlbridge from "zlbridge";
 或者
 var zlbridge = require('zlbridge')
 ```
-
-## 原生与JS交互
-
-## JS调用原生test事件
+## JS调用原生事件
 
 ### 无参数
 ```JavaScript
@@ -30,10 +27,7 @@ window.zlbridge.call('test',{key:"value"},(arg) => {
 });
 ```
 
-
-## 原生调用js
-
-### js注册jsMethod事件
+## JS注册原生事件
 ```JavaScript
 //直接返回值到原生
 window.zlbridge.register("jsMethod",(arg) => {
@@ -43,7 +37,7 @@ window.zlbridge.register("jsMethod",(arg) => {
  或者
  ```JavaScript
  //callback函数返回值到原生
-window.ZLBridge.registerWithCallback("jsMethod",(arg,callback) => {
+window.zlbridge.registerWithCallback("jsMethod",(arg,callback) => {
   //ture代表原生只能接受一次JS回调结果，false可以连续监听，默认不传为true
   callback(arg,true);
 });
