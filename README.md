@@ -43,7 +43,7 @@ window.zlbridge.registerWithCallback("jsMethod",(arg,callback) => {
 });
   ```
 
-## 通过本地注入JS脚本的，H5可以监听ZLBridge初始化完成
+## 通过本地注入JS脚本的，H5可以监听zlbridge对象初始化完成
 ```JavaScript
 document.addEventListener('ZLBridgeInitReady', function() {
     console.log('ZLBridge初始化完成');
