@@ -21,11 +21,14 @@ var zlbridge = (function () {
             window.zlbridge._callNative(args);
         },
          _callNative: function(arg) {
+               var json = JSON.stringify(arg);
                if(window.ZLBridge && window.ZLBridge.postMessage){
-                  window.ZLBridge.postMessage(JSON.stringify(arg));
+                  window.ZLBridge.postMessage(json);
                }else if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.ZLBridge){
-                  window.webkit.messageHandlers.ZLBridge.postMessage(JSON.stringify(arg));
-               }
+                  window.webkit.messageHandlers.ZLBridge.postMessage(json);
+               }else if(window.ReactNativeWebView && window.ReactNativeWebView.postMessage) {
+                  window.ReactNativeWebView.postMessage(json);
+             }
           },
         register: function(method,func){
             if (typeof func == 'function' && typeof method == 'string') {
