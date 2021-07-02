@@ -10,7 +10,7 @@ ZLBridge是为JS和原生WebView进行数据交互时提供更简单方便的小
 ## 安装
 
 ```ruby
-npm install zlbridge -D
+npm install zlbridge 
 ```
 ## 初始化
 ```JavaScript
